@@ -1,0 +1,89 @@
+/* Criação da div header, que contém a capa, a cor e imagem de fundo, o alinhamento, tamanho, opção de não repetição, etc.*/
+header {
+    background-color: #000000;
+    background-image: url(https://mail.google.com/mail/u/0?ui=2&ik=2cc1e50f6b&attid=0.1&permmsgid=msg-a:r-469787694339486429&th=18bb94a445389396&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9o30Bt4ji3UoutFAnmmp7E37c1IfJzK6GQYJe6o_YrPr_yEr2fwpkgp8P3i9PNMGHdlcG_H66jDfQqp1QU3Q_3pFEDwR-q4TSLOC9ekFXHNtFPt4wj2q2TDVI&disp=emb&realattid=18bb94a1160380cd3121);
+    padding: 500px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*Barra de navegação, com efeito de cor, alinhamento, tamanho, etc.*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+    li {
+    float: left;
+}
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    li a:hover {
+    background-color: rgb(189, 80, 80);
+}
+/*Colunas(2), divisão da tela para cada, adaptando com os problemas ocorridos, e main do conteúdo para definir a organização em table.*/
+.column {
+    float: left;
+    padding: 10px;
+}
+.column.side {
+    width: 45%;
+}
+
+.column.middle {
+    width: 50%;
+}
+.main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Footer da página*/
+.footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+/*Box que fica envolta das colunas de texto para separar cada comando explicado*/
+.box {
+    text-align: center;
+    padding: 20px;
+    border: 5px solid #000000;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+/*Ajuste de tamanho da imagem*/
+    img {
+        width: 350px;
+    }
+
+ /* Ajuste conforme necessário para telas menores, fazendo com que ocupem 100% da largura de tela. */
+    @media only screen and (max-width: 600px) {
+        header {
+            padding: 200px; 
+        }
+
+        .column {
+            width: 100%;
+        }
+
+        .column.side,
+        .column.middle {
+            width: 100%;
+        }
+
+        img {
+            width: 100%; 
+        }
+    }
